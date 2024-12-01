@@ -1,6 +1,6 @@
 # Day 1 Part 1
 
-# Calculate the 'difference between the two lists
+# Calculate the 'difference' between the two lists
 # Sort them in ascending order and then find the difference between each pair
 # Return the sum of the differences
 
@@ -14,6 +14,7 @@ with open("1_1.txt") as input:
 
         alist.append(int(a))
         blist.append(int(b))
+        
 alist.sort()
 blist.sort()
 
