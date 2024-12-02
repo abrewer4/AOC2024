@@ -4,6 +4,6 @@ def getLines(file):
 
     with open(file) as input:
         for line in input:
-            linesArray.append(line)
+            linesArray.append(line[0:-1])
 
     return linesArray
