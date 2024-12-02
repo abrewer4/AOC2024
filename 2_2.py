@@ -13,7 +13,7 @@ def removeNthItem(list, n):
     return newList
 
 
-def removeEachOnce(list):
+def reduceReportForEach(list):
     newLists = []
     for i in range(len(list)):
         newLists.append(removeNthItem(list, i))
@@ -26,7 +26,7 @@ def isSafe(numberList):
     # return false if there is both an increase AND a decrease inbetween numbers in the list
     increases = 0
     decreases = 0
-    # print(f"Checking {numberList}")
+
     for i in range(len(numberList)-1):
         a = int(numberList[i])
         b = int(numberList[i+1])
@@ -69,7 +69,7 @@ for line in reportsList:
         safe += 1
         print(f"✔️  SAFE: {line}")
     else:
-        reducedReports = removeEachOnce(line)
+        reducedReports = reduceReportForEach(line)
         safeRRs = 0
         for RR in reducedReports:
             if isSafe(RR):
