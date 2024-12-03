@@ -13,7 +13,7 @@ def parseInstructions(inputList):
     return total
 
 
-with open("3.txt") as input:
+with open("Day3.txt") as input:
     fileString = input.read()
 
 instructions = extractInstructions(fileString)
@@ -31,7 +31,7 @@ for line in fileString:
     singleLine += str(line).strip()
 
 enabledSections = re.findall(
-    r"(((do\(\))|^).+?(?=don't\(\))|$)|(do\(\)).+", singleLine)
+    r"((do\(\)|^).+?don't\(\))|(do\(\)).+", singleLine)
 
 total = 0
 
